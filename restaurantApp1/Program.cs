@@ -29,7 +29,7 @@ namespace restaurantApp1
             Console.WriteLine($"Average is {avg}");
 
         }
-
+        
    }    
         public class Restaurant
         {
