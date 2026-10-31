@@ -19,7 +19,14 @@ namespace restaurantApp1
                 new Restaurant(4, "Tee noi", "Hot pot", 4.8),
                 new Restaurant(5, "Lucky suki", "Hot pot", 4.9),
             };
-            
+            foreach (var item in restaurants)
+            {
+                Console.WriteLine($"{item.Id}. {item.Name} ({item.type}) - Rating: {item.rate}");
+            }
+            var amount = restaurants.Count();
+            var avg = restaurants.Average(x => x.rate);
+            Console.WriteLine($"Total is {amount}");
+            Console.WriteLine($"Average is {avg}");
 
         }
 
