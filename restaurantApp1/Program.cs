@@ -10,7 +10,33 @@ namespace restaurantApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello TIT1/1");
+            
+
         }
-    }
-}
+
+   }    
+        public class Restaurant
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public string type { get; set; }
+            public double rate { get; set; }
+
+            public Restaurant(int Id, string Name, string type, double rate)
+            {
+                this.Id = Id;
+                this.Name = Name;
+                this.type = type;
+                this.rate = rate;
+
+
+            }
+
+        }
+    
+} 
+    
+
+
+
+
