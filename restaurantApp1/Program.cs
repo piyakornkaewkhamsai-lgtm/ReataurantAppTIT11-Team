@@ -19,18 +19,26 @@ namespace restaurantApp1
                 new Restaurant(4, "Tee noi", "Hot pot", 4.8),
                 new Restaurant(5, "Lucky suki", "Hot pot", 4.9),
             };
+            Console.WriteLine("=== รายชื่อร้านอาหาร ===");
             foreach (var item in restaurants)
             {
                 Console.WriteLine($"{item.Id}. {item.Name} ({item.type}) - Rating: {item.rate}");
             }
-            var amount = restaurants.Count();
-            var avg = restaurants.Average(x => x.rate);
-            Console.WriteLine($"Total is {amount}");
-            Console.WriteLine($"Average is {avg}");
+
+            Console.WriteLine("========================================================================");
+            int totalrestaurant = restaurants.Count;
+            double totalrating = restaurants.Average(r => r.rate);
+            Console.WriteLine($"จำนวนร้านอาหารทั้งหมด {totalrestaurant}ร้าน");
+            Console.WriteLine($"คะแนนเฉลี่ยรวม{totalrating:F2} คะแนน");
+            Console.WriteLine("========================================================================");
+
 
         }
-        
-   }    
+
+
+
+
+    }
         public class Restaurant
         {
             public int Id { get; set; }
@@ -49,10 +57,8 @@ namespace restaurantApp1
             }
 
         }
+}
+
     
-} 
     
-
-
-
-
+        
