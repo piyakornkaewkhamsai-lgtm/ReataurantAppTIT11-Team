@@ -29,8 +29,33 @@ namespace restaurantApp1
             Console.WriteLine($"Average is {avg}");
 
         }
-        
-   }    
+        static void SearchRestaurant(List<Restaurant> restaurants)
+        {
+            Console.Write("กรอกชื่อร้านอาหารที่ต้องการค้นหา: ");
+            string keyword = Console.ReadLine();
+
+            var result = restaurants
+                .Where(r => r.Name.IndexOf(keyword,
+                StringComparison.OrdinalIgnoreCase) >= 0)
+                .ToList();
+
+            if (result.Count > 0)
+            {
+                Console.WriteLine("\n=== ผลการค้นหา ===");
+
+                foreach (var restaurant in result)
+                {
+                    Console.WriteLine("ชื่อร้าน: " + restaurant.Name);
+                }
+            }
+            else
+            {
+                Console.WriteLine("ไม่พบร้านอาหารที่ค้นหา");
+            }
+        }
+    }
+
+    }    
         public class Restaurant
         {
             public int Id { get; set; }
@@ -50,7 +75,7 @@ namespace restaurantApp1
 
         }
     
-} 
+
     
 
 
