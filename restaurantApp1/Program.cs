@@ -54,26 +54,26 @@ namespace restaurantApp1
             }
         }
     }
+}
+    public class Restaurant
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string type { get; set; }
+        public double rate { get; set; }
 
-    }    
-        public class Restaurant
+        public Restaurant(int Id, string Name, string type, double rate)
         {
-            public int Id { get; set; }
-            public string Name { get; set; }
-            public string type { get; set; }
-            public double rate { get; set; }
+            this.Id = Id;
+            this.Name = Name;
+            this.type = type;
+            this.rate = rate;
 
-            public Restaurant(int Id, string Name, string type, double rate)
-            {
-                this.Id = Id;
-                this.Name = Name;
-                this.type = type;
-                this.rate = rate;
-
-
-            }
 
         }
+
+    
+}
     
 
     
